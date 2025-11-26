@@ -1,0 +1,115 @@
+================================================================================
+  ML-ASSISTED ADDITIVE MANUFACTURING METASTRUCTURES - QUICK SETUP GUIDE
+================================================================================
+
+PREREQUISITES:
+- Python 3.8 or higher must be installed
+- Download from: https://www.python.org/downloads/
+- During installation, check "Add Python to PATH"
+
+================================================================================
+STEP-BY-STEP INSTALLATION (Copy commands one by one)
+================================================================================
+
+1. Extract the ZIP file to a folder
+
+2. Open Command Prompt or PowerShell in the project folder
+
+3. Create virtual environment:
+   python -m venv venv
+
+4. Activate virtual environment:
+   Windows CMD:  venv\Scripts\activate
+   PowerShell:   venv\Scripts\Activate.ps1
+   Mac/Linux:    source venv/bin/activate
+
+5. Install dependencies:
+   python -m pip install --upgrade pip setuptools wheel
+   # Install key binary packages first to avoid source builds on Windows
+   python -m pip install numpy scikit-learn pandas
+   python -m pip install -r requirements.txt
+
+6. Generate dataset:
+   python generate_dataset.py
+
+7. Train the model:
+   python train_model.py
+
+8. Start the server:
+   python app.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   OR
+   start.bat
+
+9. Open browser and go to: http://localhost:5000
+
+================================================================================
+COMPLETE COMMAND LIST (Windows - Copy all at once)
+================================================================================
+
+python -m venv venv
+venv\Scripts\activate
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install numpy scikit-learn pandas
+python generate_dataset.py
+python train_model.py
+python app.py
+
+================================================================================
+AFTER FIRST SETUP - DAILY USE
+================================================================================
+
+Just run:
+start.bat
+
+OR
+
+venv\Scripts\activate
+python app.py
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Problem: "ModuleNotFoundError" for packages like sklearn/pandas
+Fix: Make sure virtual environment is activated (you should see (venv) in prompt).
+If a package fails to build (common on Windows), try:
+  - Install Microsoft Visual C++ Build Tools:
+    https://visualstudio.microsoft.com/visual-cpp-build-tools/
+  - OR use Miniconda/Anaconda and install binary packages via conda:
+    conda create -n amml python=3.10
+    conda activate amml
+    conda install numpy scikit-learn pandas
+
+Problem: "python is not recognized"
+Fix: Reinstall Python and check "Add Python to PATH"
+
+Problem: "Model files not found"
+Fix: Run: python train_model.py
+
+Problem: Port 5000 already in use
+Fix: Close other applications or change port in app.py
+
+================================================================================
+For detailed instructions, see INSTALLATION.md
+================================================================================
+

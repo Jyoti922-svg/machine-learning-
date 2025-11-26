@@ -1,0 +1,39 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Model files (optional - uncomment if you don't want to share trained models)
+# model/*.pkl
+
+# Dataset (optional - uncomment if you don't want to share dataset)
+# data/*.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Flask
+instance/
+.webassets-cache
+
+# Environment variables
+.env
+.env.local
+

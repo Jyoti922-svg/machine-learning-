@@ -1,0 +1,87 @@
+================================================================================
+  COMPLETE COMMAND REFERENCE - COPY & PASTE READY
+================================================================================
+
+FIRST-TIME SETUP (Run these commands in order):
+================================================================================
+
+1. python -m venv venv
+
+2. venv\Scripts\activate
+
+3. python -m pip install --upgrade pip
+
+4. pip install -r requirements.txt
+
+5. python generate_dataset.py
+
+6. python train_model.py
+
+7. python app.py
+
+================================================================================
+OR USE AUTOMATED SETUP:
+================================================================================
+
+setup.bat
+
+(This does steps 1-6 automatically)
+
+================================================================================
+DAILY USE (After first setup):
+================================================================================
+
+start.bat
+
+OR
+
+venv\Scripts\activate
+python app.py
+
+================================================================================
+TROUBLESHOOTING COMMANDS:
+================================================================================
+
+Check Python version:
+python --version
+
+Check if venv is activated (should show (venv)):
+echo %VIRTUAL_ENV%
+
+Reinstall dependencies:
+pip install -r requirements.txt --force-reinstall
+
+Check if model files exist:
+dir model\model.pkl
+dir model\label_encoder.pkl
+
+Regenerate dataset:
+python generate_dataset.py
+
+Retrain model:
+python train_model.py
+
+================================================================================
+POWERSHELL VERSIONS (if using PowerShell):
+================================================================================
+
+1. python -m venv venv
+
+2. venv\Scripts\Activate.ps1
+
+3. python -m pip install --upgrade pip
+
+4. pip install -r requirements.txt
+
+5. python generate_dataset.py
+
+6. python train_model.py
+
+7. python app.py
+
+OR
+
+.\start.ps1
+
+================================================================================
+
